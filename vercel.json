@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/customer(.*)",
+      "dest": "/customer$1"
+    },
+    {
+      "src": "/staff(.*)",
+      "dest": "/staff$1"
+    }
+  ]
+} 
