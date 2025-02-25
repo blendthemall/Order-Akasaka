@@ -14,7 +14,7 @@ const SAMPLE_MENU_ITEMS: MenuItem[] = [
     price: 0,
     category: 'drink',
     description: '深煎りの香り高いコーヒー',
-    icon: FaCoffee,
+    icon: '☕',
     color: '#4B3621',
     imagePath: '/images/hot-coffee.webp'
   },
@@ -24,7 +24,7 @@ const SAMPLE_MENU_ITEMS: MenuItem[] = [
     price: 0,
     category: 'drink',
     description: '氷でキリッと冷やしたコーヒー',
-    icon: FaCoffee,
+    icon: '☕',
     color: '#6F4E37',
     imagePath: '/images/iced-coffee.webp'
   },
@@ -34,7 +34,7 @@ const SAMPLE_MENU_ITEMS: MenuItem[] = [
     price: 0,
     category: 'drink',
     description: '冷たい水',
-    icon: IoWater,
+    icon: '💧',
     color: '#87CEEB',
     imagePath: '/images/water.webp'
   },
@@ -44,7 +44,7 @@ const SAMPLE_MENU_ITEMS: MenuItem[] = [
     price: 0,
     category: 'drink',
     description: '香り高い日本茶',
-    icon: BiDrink,
+    icon: '🍵',
     color: '#90EE90',
     imagePath: '/images/tea.webp'
   },
@@ -54,7 +54,7 @@ const SAMPLE_MENU_ITEMS: MenuItem[] = [
     price: 0,
     category: 'drink',
     description: '搾りたての果汁100%',
-    icon: BiDrink,
+    icon: '🍊',
     color: '#FFA500',
     imagePath: '/images/orange-juice.webp'
   },
@@ -64,7 +64,7 @@ const SAMPLE_MENU_ITEMS: MenuItem[] = [
     price: 0,
     category: 'drink',
     description: 'さっぱりとした酸味',
-    icon: BiDrink,
+    icon: '🍊',
     color: '#FFB6C1',
     imagePath: '/images/grapefruit-juice.webp'
   },
@@ -199,10 +199,9 @@ export default function CustomerOrderPage() {
                 />
               ) : (
                 <div className="flex items-center justify-center w-full h-full bg-gray-100 rounded">
-                  {item.icon && React.createElement(item.icon, {
-                    className: "text-5xl",
-                    style: { color: item.color }
-                  })}
+                  <span className="text-5xl" style={{ color: item.color }}>
+                    {item.icon}
+                  </span>
                 </div>
               )}
             </div>
