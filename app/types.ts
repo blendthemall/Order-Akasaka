@@ -1,4 +1,5 @@
 import { IconType } from 'react-icons';
+import { FC } from 'react';
 
 export interface MenuItem {
   id: number;
@@ -6,7 +7,7 @@ export interface MenuItem {
   price: number;
   category: 'drink' | 'food';
   description: string;
-  icon?: IconType;
+  icon?: FC;
   color?: string;
   imagePath?: string;
 }

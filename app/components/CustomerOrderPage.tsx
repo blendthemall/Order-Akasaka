@@ -4,8 +4,8 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { MenuItem, Order, SeatNumber } from '../types';
 import { FaCoffee } from 'react-icons/fa';
-import { BiDrink } from 'react-icons/bi';
 import { IoWater } from 'react-icons/io5';
+import { BiDrink } from 'react-icons/bi';
 
 const SAMPLE_MENU_ITEMS: MenuItem[] = [
   {
@@ -199,7 +199,10 @@ export default function CustomerOrderPage() {
                 />
               ) : (
                 <div className="flex items-center justify-center w-full h-full bg-gray-100 rounded">
-                  {item.icon && <item.icon className="text-5xl" style={{ color: item.color }} />}
+                  {item.icon && React.createElement(item.icon, {
+                    className: "text-5xl",
+                    style: { color: item.color }
+                  })}
                 </div>
               )}
             </div>
